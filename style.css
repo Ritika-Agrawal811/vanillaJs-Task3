@@ -1,43 +1,25 @@
 body{
     font-size:10px;
+    background-image:linear-gradient(60deg,#ffafbd ,#ffc3a0 80%);
     
 }
 
 
-.ToDo , .incompleteList , .completeList{
+.ToDo {
+/*
     border:5px solid transparent;
     border-image: linear-gradient(60deg , #cc2b5e , #753a88);
     border-image-slice:1;
-    border-bottom:none;
+*/
     width:40em;
-    height:40em;
+    height:60em;
     position:absolute;
-    top:40%;
+    top:50%;
     left:50%;
     transform:translate(-50%,-50%);
-/*    background-color:#d4f3ef;*/
-    background-image:linear-gradient(60deg,#ffafbd ,#ffc3a0 80%);
+    
 }
 
-
-.incompleteList{
-    top:81.5%;
-    background-color:#fce2ce;
-    overflow-y: scroll;
-    height:20em;
-    border-top:none;
-  
-}
-
-.completeList{
-    top:109%;
-    background-color:#cff6cf;
-    overflow-y: scroll;
-    height:20em;
-    border-top:none;
-    border-bottom:5px solid #d9c6a5;
-    margin-bottom:50px;
-}
 
 p{
     font-size:2em;
@@ -45,13 +27,19 @@ p{
     margin-left:1em;
     text-align: justify;
     font-weight:300;
+    animation: fade linear 2s 1;
     
 }
 
 h1{
     font-size:3.3em;
     text-align: center;
+    border:5px solid tranparent;
     font-family: 'Rowdies', cursive;
+    border-image: linear-gradient(60deg , #cc2b5e , #753a88);
+    border-image-slice:1;
+    animation: borderAnimate 1s linear 1;
+    animation-fill-mode: forwards;
 }
 
 h2{
@@ -120,39 +108,56 @@ li>span{
     margin-right:0.5em;
 }
 
+@keyframes borderAnimate{
+    0%{
+       border-left:5px solid red;
+    }
+    
+     33%{
+       border-top:5px solid red;
+    }
+    
+     66%{
+       border-right:5px solid red;
+    }
+    
+    100%{
+        border-bottom:5px solid red;
+        
+    }
+}
+
+@keyframes fade{
+    0%{
+        opacity:-1;
+    }
+    
+    
+    100%{
+         opacity:1;
+        
+    }
+}
+
 
 @media (max-width:339px){
    
     
-   .ToDo , .incompleteList , .completeList{
-    left:56%;
+   .ToDo {
+    left:50%;
     width:35em;
-    height:40em;
     
 }
-    .incompleteList{
-    top:85.5%;
-    background-color:#fce2ce;
-    overflow-y: scroll;
-    height:20em;
-    border-top:none;
-  
-}
-
-.completeList{
-    top:114%;
-    background-color:#cff6cf;
-    overflow-y: scroll;
-    height:20em;
-    border-top:none;
-    border-bottom:5px solid #d9c6a5;
-    margin-bottom:50px;
-}
+    
+    h1{
+        width:75%;
+        margin-left:1.25em;
+    } 
     
     p{
     font-size:2em;
-    width:88%;
-    margin-left:1em;
+    width:78%;
+    margin-left:1.5em;
     text-align: justify;
     font-weight:300;
     
@@ -160,18 +165,19 @@ li>span{
     
     input{
     
-    margin-left:2em;
+    margin-left:1.5em;
     
 }
     #Add_task{
     width:14em;
-    margin-left:2.25em;
+    margin-left:1.75em;
     margin-top:0.75em;
    
 }
     
     li{
-     margin-left:-1.5em;
+     margin-left:-0.5em;
+     width:13em;
 }
 
 
@@ -180,36 +186,21 @@ li>span{
 @media (min-width:340px) and (max-width:375px){
    
     
-   .ToDo , .incompleteList , .completeList{
+   .ToDo {
     left:50%;
-    width:33em;
-    height:40em;
+    width:35em;
     
 }
     
-        .incompleteList{
-    top:91.5%;
-    background-color:#fce2ce;
-    overflow-y: scroll;
-    height:20em;
-    border-top:none;
-  
-}
-
-.completeList{
-    top:118%;
-    background-color:#cff6cf;
-    overflow-y: scroll;
-    height:20em;
-    border-top:none;
-    border-bottom:5px solid #d9c6a5;
-    margin-bottom:50px;
-}
+    h1{
+        width:75%;
+        margin-left:1.25em;
+    } 
     
     p{
     font-size:2em;
-    width:88%;
-    margin-left:1em;
+    width:78%;
+    margin-left:1.5em;
     text-align: justify;
     font-weight:300;
     
@@ -217,18 +208,19 @@ li>span{
     
     input{
     
-    margin-left:1em;
+    margin-left:1.5em;
     
 }
     #Add_task{
     width:14em;
-    margin-left:1.25em;
+    margin-left:1.75em;
     margin-top:0.75em;
    
 }
     
     li{
-     margin-left:-1.5em;
+     margin-left:-0.5em;
+     width:13em;
 }
 
 
@@ -238,36 +230,22 @@ li>span{
 @media (min-width:376px) and (max-width:424px){
    
     
-   .ToDo , .incompleteList , .completeList{
+   .ToDo {
+    top:60%;
     left:50%;
     width:35em;
-    height:40em;
     
 }
     
-            .incompleteList{
-    top:85.5%;
-    background-color:#fce2ce;
-    overflow-y: scroll;
-    height:20em;
-    border-top:none;
-  
-}
-
-.completeList{
-    top:114%;
-    background-color:#cff6cf;
-    overflow-y: scroll;
-    height:20em;
-    border-top:none;
-    border-bottom:5px solid #d9c6a5;
-    margin-bottom:50px;
-}
+    h1{
+        width:75%;
+        margin-left:1.25em;
+    } 
     
     p{
     font-size:2em;
-    width:88%;
-    margin-left:1em;
+    width:78%;
+    margin-left:1.5em;
     text-align: justify;
     font-weight:300;
     
@@ -275,19 +253,21 @@ li>span{
     
     input{
     
-    margin-left:2em;
+    margin-left:1.5em;
     
 }
     #Add_task{
     width:14em;
-    margin-left:2.25em;
+    margin-left:1.75em;
     margin-top:0.75em;
    
 }
     
     li{
-     margin-left:-1.5em;
+     margin-left:-0.5em;
+     width:13em;
 }
+
 
 
 }
