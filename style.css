@@ -188,7 +188,7 @@ li>span{
 }
     
         .incompleteList{
-    top:87.5%;
+    top:91.5%;
     background-color:#fce2ce;
     overflow-y: scroll;
     height:20em;
@@ -197,7 +197,7 @@ li>span{
 }
 
 .completeList{
-    top:116%;
+    top:118%;
     background-color:#cff6cf;
     overflow-y: scroll;
     height:20em;
